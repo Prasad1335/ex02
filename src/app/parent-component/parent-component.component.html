@@ -1,0 +1,43 @@
+<p>parent-component works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="  mt-5 border border-danger p-5  alert alert-danger" (submit)="addEmpolyee($event)">
+                <h4 class="text-danger  bg-light p-3">Add Emp Form</h4>
+                <hr>
+                Id :<input type="number" name="id" class="form-control border border-danger" placeholder="emp id"><br>
+                Name :<input type="text" name="name" class="form-control border border-danger"
+                    placeholder="emp name"><br>
+                Salary: <input type="number" name="salary" class="form-control border border-danger"
+                    placeholder="emp salary"><br>
+                <input class="btn btn-danger form-control" type="submit" value="Add">
+            </form>
+            <hr>
+            <app-child-component [objects]="employees"></app-child-component>
+
+        </div>
+        <div class="col-md-6">
+            <form class="  mt-5 border border-warning p-5  alert alert-warning" (submit)="addPizza($event)">
+                <h4 class="text-warning  bg-light p-3">Add pizzas Form</h4>
+                <hr>
+                size :<input type="text" name="size" class="form-control border border-warning"
+                    placeholder="pizza size"><br>
+                type :<input type="text" name="type" class="form-control border border-warning"
+                    placeholder="pizza type"><br>
+                price: <input type="number" name="price" class="form-control border border-warning"
+                    placeholder="pizza price"><br>
+                <input class="btn btn-warning form-control" type="submit" value="Add">
+            </form>
+            <hr>
+            <app-child-component [objects]="pizzas"></app-child-component>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- <ul>
+    <li *ngFor="let emp of employees">{{emp.id}},{{emp.name}},{{emp.salary}}</li>
+</ul> -->

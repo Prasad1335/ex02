@@ -1,0 +1,22 @@
+<p class="text-center">child-component file data show!</p>
+
+<!-- <ul>
+    <li *ngFor="let obj of objects">
+        
+        <div *ngIf="obj.id && obj.name && obj.salary"><h4>{{obj.id}},{{obj.name}},{{obj.salary}}</h4></div>
+
+        <div *ngIf="obj.size && obj.type && obj.price"><h4>{{obj.size}},{{obj.type}},{{obj.price}}</h4></div></li>
+</ul> -->
+
+<!-- <ul>
+    <div *ngFor="let obj of objects">
+        <li *ngFor="let val of obj|keyvalue"> {{val.key}} : {{val.value}}</li>
+    </div>
+</ul> -->
+
+<ul>
+    <li *ngFor="let obj of objects">
+        <span *ngFor="let key of getKeys(obj)">{{obj[key]}}</span>
+        <!-- <span *ngFor="let values of getKeys(obj)">{{obj[values]}}</span> -->
+    </li>
+</ul>
